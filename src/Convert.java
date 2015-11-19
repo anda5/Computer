@@ -6,7 +6,9 @@ public class Convert {
     private String romanNumber;
 
 
-    public int getValueOfSimbol(char simbol) {
+
+
+     private int getValueOfSimbol(char simbol) {
         int integerValue = 0;
         switch (simbol) {
             case ('I'):
@@ -33,6 +35,15 @@ public class Convert {
         }
       return integerValue;
 
+    }
+
+    private boolean isValid(String romanNumber) {
+
+        if (romanNumber.matches("^(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$"))
+        { return true;
+        }else {
+            return false;
+        }
     }
 
 }
